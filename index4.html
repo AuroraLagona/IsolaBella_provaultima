@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isola Bella - Riserva Naturale della Sicilia</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="marchio.png" alt="Logo Isola Bella" style="height: 50px;">
+            Isola Bella
+        </div>
+
+        <!-- Menu di navigazione -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index2.html">Museo</a>
+            <a href="index3.html">Riserva</a>
+            <a href="index4.html">Escursioni</a>
+            <a href="index5.html">Info & Tariffe</a>
+        </nav>
+
+        <!-- Barra di ricerca -->
+        <input type="text" class="search-bar" placeholder="Cerca...">
+    </header>
+
+  
+      <section class="hero">
+            <img src="copertina escursioni.png" alt="Isola Bella" class="hero-image" width="100%">
+            <div class="hero-overlay">
+            </div>
+        </section>
+     
+    
+        <main>
+            <section id="escursioni-isola-bella" class="escursioni-isola-bella">
+                <div class="escursioni-container">
+                    <h2 class="escursioni-title">Escursioni e Isola Bella</h2>
+                    <p class="escursioni-description">Scopri le bellezze naturali e storiche dell'isola, un luogo dove la natura incontra la storia in un'esperienza unica.</p>
+                    <div class="escursioni-image-container">
+                        <img src="immagine bevenuto.png" alt="Isola Bella" class="escursioni-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divisore tra le sezioni -->
+<hr class="divider">
+<section id="altra-sezione" class="altra-sezione">
+    <div class="altra-sezione-container">
+        <!-- Contenuto della seconda sezione -->
+    </div>
+</section>
+
+    <!-- Sezione percorsi escursioni -->
+    <section id="percorsi-escursioni" class="escursioni-percorsi">
+        <div class="escursioni-container">
+            <h2>I Percorsi dell'Isola</h2>
+            <div class="percorsi-card">
+                <h3>Percorso standard</h3>
+                <p>Un percorso semplice da fare in gruppo o singolarmente in due ore circa,che ti porta a scoprire le bellezze cristalline dell'isola e il suo panorama mozzafiato.</p>
+            </div>
+            <div class="percorsi-card">
+                <h3>Percorso completo</h3>
+                <p>Un percorso più impegnativo esclusivamente in gruppi da 15 o 20 persone,della durata di otto ore adatto agli amanti della natura,delle acque e della tranquillità.</p>
+            </div>
+            <div class="percorsi-card">
+                <h3>Snorkeling</h3>
+                <p>Immersione nelle acque crtistalline dell'isola che comprende l'esplorazione dei coralli. Il nostro istruttore vi aiutera a conoscere le peculiarità dell' snorkeling!
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- Galleria fotografica -->
+<section id="galleria-foto" class="escursioni-galleria">
+    <div class="escursioni-container">
+        <h2>Galleria escursioni</h2>
+        <div class="galleria">
+            <div class="galleria-item">
+                <img src="standard.png" alt="Isola Bella" class="galleria-immagine" id="img1">
+            </div>
+            <div class="galleria-item">
+                <img src="completa.png" alt="Isola Bella" class="galleria-immagine" id="img2">
+            </div>
+            <div class="galleria-item">
+                <img src="skorkeling.png" alt="Isola Bella" class="galleria-immagine" id="img3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sezione per l'immagine ingrandita -->
+<section id="image-viewer" class="image-viewer">
+    <div class="image-container">
+        <img src="" alt="Immagine Ingrandita" id="view-img" class="view-img">
+    </div>
+</section>
+
+<script>
+    // Aggiungere l'evento di clic per ogni immagine della galleria
+    const images = document.querySelectorAll('.galleria-immagine');
+    const imageViewer = document.getElementById('image-viewer');
+    const viewImg = document.getElementById('view-img');
+
+    // Per ogni immagine nella galleria
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            // Mostra la sezione dell'immagine ingrandita
+            imageViewer.classList.add('active');
+            // Imposta l'immagine ingrandita nel visualizzatore
+            viewImg.src = this.src;  // Imposta l'URL dell'immagine cliccata
+        });
+    });
+
+    // Chiudere il visualizzatore cliccando fuori dall'immagine
+    imageViewer.addEventListener('click', function(event) {
+        if (event.target === imageViewer) {
+            imageViewer.classList.remove('active');
+        }
+    });
+</script>
+
+    <!-- Sezione recensioni -->
+    <section id="recensioni" class="escursioni-recensioni">
+        <div class="escursioni-container">
+            <h2>Cosa Dicono i Nostri Visitatori</h2>
+            <div class="recensione">
+                <blockquote>
+                    <p>"Un'esperienza incredibile! I percorsi sono ben segnalati e la vista è mozzafiato. Un'escursione che consigliamo assolutamente!"</p>
+                    <footer>- Luca e Maria,Taormina</footer>
+                </blockquote>
+            </div>
+            <div class="recensione">
+                <blockquote>
+                    <p>"Ho scelto il percorso completo con degli amici e sono rimasta incantata dalla natura incontaminata dell'isola. La guida è stata molto preparata e simpatica!"</p>
+                    <footer>- Elena,Catania</footer>
+                </blockquote>
+            </div>
+
+            <div class="recensione">
+                <blockquote>
+                    <p>"Ho scelto il percorso Snorkeling, esperienza assolutamente da rifare. Luigi, l'istruttore semplicemente fantastico!"</p>
+                    <footer>- Alessio,Messina</footer>
+                </blockquote>
+            </div>
+
+            <div class="recensione">
+                <blockquote>
+                    <p>"Abbiamo scelto il percorso completo e lo snorkeling. Esperienze meravigliose,il viaggio lungo è valso la pena!</p>
+                    <footer>- Andrea e il suo gruppo,Siracusa</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sezione informazioni utili -->
+    <section id="info-utili" class="escursioni-info-utili">
+        <div class="escursioni-container">
+            <h2>Informazioni Utili</h2>
+            <ul>
+                <li>Orari escursioni: dalle 08:30 alle 20:00</li>
+                <li>Attrezzatura consigliata: crema solare,acqua,pranzo a sacco e una buona dose di energia.</li>
+                <li>Per ulteriori informazioni contattare: isolabella.escursioni@gmail.it</li>
+                <li>Cellulare:+39 3456789023</li>
+                <li>Guide disponibili su prenotazione.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+   
+<footer class="footer">
+    <div class="container">
+        <!-- Sezione Info sull'Isola Bella -->
+        <div class="footer-info">
+            <img src="marchio.png" alt="Logo del sito" class="footer-logo">
+          </div>
+        
+        <!-- Sezione Links -->
+        <div class="footer-links">
+            <h4>Link utili</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index5.html">Contatti</a></li>
+                <li><a href="index6.html">Fauna</a></li>
+                <li><a href="index7.html">Flora</a></li>
+                <li><a href="index8.html">Emergenze Floristiche</a></li>
+                <li><a href="https://auroralagona.github.io/Acquisto_biglietti_isolabella/">Acquista i biglietti</a></li>
+            </ul>
+        </div>
+
+        <!-- Sezione Contatti -->
+        <div class="footer-contact">
+            <h4>Contattaci</h4>
+            <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
+            <p>+39 0942 628738</p>
+            <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
+        </div>
+
+        
+    <!-- Sezione Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Isola Bella. Tutti i diritti riservati.</p>
+        <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
+    </div>
+</footer>
+
+  
+</body>
+</html>
